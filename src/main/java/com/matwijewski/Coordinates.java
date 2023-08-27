@@ -45,4 +45,12 @@ public class Coordinates {
         result = 31 * result + rank.hashCode();
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Coordinates{" +
+                "file=" + file +
+                ", rank=" + rank +
+                '}';
+    }
 }
