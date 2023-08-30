@@ -2,8 +2,6 @@ package com.matwijewski;
 
 import com.matwijewski.piece.CoordinatesShift;
 
-import java.util.Objects;
-
 public class Coordinates {
     public final File file;
     public final Integer rank;
@@ -48,9 +46,6 @@ public class Coordinates {
 
     @Override
     public String toString() {
-        return "Coordinates{" +
-                "file=" + file +
-                ", rank=" + rank +
-                '}';
+        return "" + file + rank;
     }
 }

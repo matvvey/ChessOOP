@@ -1,5 +1,6 @@
 package com.matwijewski;
 
+import com.matwijewski.board.Board;
 import com.matwijewski.piece.Piece;
 
 import java.util.Set;
@@ -82,7 +83,7 @@ public class BoardConsoleRenderer {
     private String getPieceSprite(Piece piece, boolean isHighLight) {
         return colorizeSprite(
                 "   " + selectUnicodeSprite(piece) + "   ", piece.color, Board.isSquareDark(piece.coordinates), isHighLight
-                //        - another spaces
+                //        - another types of spaces
         );
     }
 }

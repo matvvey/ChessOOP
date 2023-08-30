@@ -1,12 +1,14 @@
-package com.matwijewski;
+package com.matwijewski.board;
+
+import com.matwijewski.Coordinates;
+import com.matwijewski.File;
+import com.matwijewski.PieceFactory;
 
 public class BoardFactory {
 
     private PieceFactory pieceFactory = new PieceFactory();
     public Board fromFEN(String fen) {
-        //rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
-
-        Board board = new Board();
+        Board board = new Board(fen);
         
         String[] parts = fen.split(" ");
         String piecePositions = parts[0];
@@ -35,4 +37,13 @@ public class BoardFactory {
         }
         return board;
     }
+    public Board copy (Board source) {
+        Board clone = fromFEN(source.startingFen);
+
+        for (Move move : source.moves) {
+            clone.makeMove(move);
+        }
+        return clone;
+    }
+
 }

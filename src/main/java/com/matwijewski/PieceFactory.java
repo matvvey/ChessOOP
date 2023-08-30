@@ -3,7 +3,7 @@ package com.matwijewski;
 import com.matwijewski.piece.*;
 
 public class PieceFactory {
-    Piece fromFenChar(char fenChar, Coordinates coordinates) {
+    public Piece fromFenChar(char fenChar, Coordinates coordinates) {
         return switch (fenChar) {
             case 'p' -> new Pawn(Color.BLACK, coordinates);
             case 'P' -> new Pawn(Color.WHITE, coordinates);
